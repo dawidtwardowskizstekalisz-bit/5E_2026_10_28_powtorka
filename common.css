@@ -1,0 +1,182 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #1a2332;
+  background: #f4f1eb;
+}
+
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 2.5rem;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.92rem;
+}
+
+.site-nav a {
+  color: #0d6e6e;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 0.5rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.badge-accent {
+  background: #e0f2f1;
+  color: #0d6e6e;
+}
+
+h1,
+h2 {
+  font-family: "Literata", Georgia, serif;
+  line-height: 1.25;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.85rem;
+}
+
+h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.2rem;
+}
+
+.lead {
+  margin: 0 0 1.25rem;
+  color: #3d4a5c;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+  padding: 1.1rem 1.15rem;
+  border: 1px solid #d8d2c8;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.section.tips {
+  background: #faf8f4;
+}
+
+.hint {
+  margin: 0 0 0.75rem;
+  color: #5a6a7a;
+  font-size: 0.92rem;
+}
+
+.demo {
+  margin-top: 0.5rem;
+}
+
+.pole {
+  margin-bottom: 0.75rem;
+}
+
+.pole label {
+  font-weight: 600;
+}
+
+.demo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  padding: 0.45rem 0.85rem;
+  border: 1px solid #0d6e6e;
+  border-radius: 8px;
+  background: #0d6e6e;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background: #095656;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+  margin-top: 0.25rem;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid #c8c2b8;
+  border-radius: 8px;
+  font: inherit;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+  background: #ece8e2;
+  color: #7a8490;
+}
+
+.wynik {
+  margin-top: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #d8d2c8;
+  background: #faf8f4;
+  min-height: 2.4rem;
+  white-space: pre-line;
+}
+
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #d8d2c8;
+  font-size: 0.92rem;
+}
+
+footer a {
+  color: #0d6e6e;
+}
+
+code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.88em;
+}

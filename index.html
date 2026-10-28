@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Powtórka JavaScript — 5E grupa 1 · 28.10.2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&family=Literata:opsz,wght@7..72,600;7..72,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="common.css">
+  <style>
+    .kafelki {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .czesc {
+      min-width: 7.5rem;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      background: #1a2332;
+      color: #fff;
+      font-weight: 600;
+      text-align: center;
+    }
+    #kafelek-z4 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 96px;
+      padding: 1rem;
+      border-radius: 10px;
+      background: #0d6e6e;
+      color: #fff;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+    }
+    #lista-z5 {
+      margin: 0.5rem 0 0.75rem 1.25rem;
+    }
+    #lista-z5 li {
+      padding: 0.3rem 0.5rem;
+      margin-bottom: 0.25rem;
+      border-radius: 4px;
+      border: 1px solid #d8d2c8;
+      background: #fff;
+    }
+    .lista-pozycji {
+      margin: 0.75rem 0 0 1.25rem;
+    }
+    .lista-pozycji li {
+      padding: 0.25rem 0.4rem;
+      border-radius: 4px;
+      margin-bottom: 0.2rem;
+    }
+  </style>
+  <script src="script.resolved.js" defer></script>
+</head>
+<body>
+  <div class="wrap">
+    <nav class="site-nav">
+      <a href="../../2026_09_14__powtorka_js_dom/index.html">← Zakres (powtórka)</a>
+      <a href="PODSUMOWANIE.md">Co umieć</a>
+      <a href="ZADANIA.md">Treść zadań</a>
+    </nav>
+
+    <p class="badge badge-accent">5E · grupa 1 · 28.10.2026</p>
+    <h1>Powtórka przed sprawdzianem</h1>
+    <p class="lead">
+      HTML jest gotowy. Logikę pisz w <strong>script.js</strong>.
+      Ściąga: <strong>PODSUMOWANIE.md</strong>. Treść zadań: <strong>ZADANIA.md</strong>.
+    </p>
+
+    <section class="section" id="zadanie-1">
+      <h2>Zadanie 1 — status zlecenia</h2>
+      <p class="hint"><code>getElementById</code>, <code>textContent</code>, <code>style.backgroundColor</code>, <code>style.color</code>.</p>
+      <div class="demo">
+        <p id="status-z1" style="padding:0.65rem 0.85rem;border:1px solid #d8d2c8;border-radius:8px;background:#fff;">
+          Status: oczekuje
+        </p>
+        <div class="demo-actions">
+          <button type="button" id="btn-z1">Przyjmij zlecenie</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="zadanie-2">
+      <h2>Zadanie 2 — kafelki części</h2>
+      <p class="hint"><code>getElementsByClassName("czesc")</code> i pętla <code>for</code>.</p>
+      <div class="demo">
+        <div class="kafelki">
+          <div class="czesc">RAM</div>
+          <div class="czesc">Dysk</div>
+          <div class="czesc">Zasilacz</div>
+        </div>
+        <div class="demo-actions">
+          <button type="button" id="btn-z2">Podświetl części</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="zadanie-3">
+      <h2>Zadanie 3 — nazwa klienta</h2>
+      <p class="hint"><code>length</code>, <code>indexOf</code>, <code>toUpperCase</code>, <code>toLowerCase</code>, <code>substr</code> albo <code>replace</code>.</p>
+      <div class="demo">
+        <div class="pole">
+          <label for="nazwa-z3">Nazwa klienta</label><br>
+          <input type="text" id="nazwa-z3" value="Jan Kowalski" maxlength="60" style="max-width:320px;width:100%;">
+        </div>
+        <div class="demo-actions">
+          <button type="button" id="btn-z3">Pokaż metody String</button>
+        </div>
+        <div class="wynik" id="wynik-z3"></div>
+      </div>
+    </section>
+
+    <section class="section" id="zadanie-4">
+      <h2>Zadanie 4 — kafelek i mysz</h2>
+      <p class="hint"><code>onclick</code>, <code>ondblclick</code>, <code>onmouseover</code>, <code>onmouseout</code>.</p>
+      <div class="demo">
+        <div id="kafelek-z4">Najedź, kliknij, kliknij dwa razy</div>
+      </div>
+    </section>
+
+    <section class="section" id="zadanie-5">
+      <h2>Zadanie 5 — lista usterek</h2>
+      <p class="hint"><code>createElement</code>, <code>appendChild</code>, <code>removeChild</code>, <code>replaceChild</code>.</p>
+      <div class="demo">
+        <ul id="lista-z5">
+          <li>Nie włącza się</li>
+          <li>Głośny wentylator</li>
+        </ul>
+        <div class="demo-actions">
+          <button type="button" id="btn-dodaj-z5">Dodaj</button>
+          <button type="button" id="btn-usun-z5">Usuń ostatnią</button>
+          <button type="button" id="btn-podmien-z5">Podmień pierwszą</button>
+        </div>
+        <div class="wynik" id="wynik-z5"></div>
+      </div>
+    </section>
+
+    <section class="section" id="zadanie-6">
+      <h2>Zadanie 6 — formularz zgłoszenia</h2>
+      <p class="hint">Radio <code>getElementsByName</code>, checkbox, <code>onchange</code> na selectcie, <code>querySelectorAll(".pozycja")</code>.</p>
+      <div class="demo">
+        <form onsubmit="return false;">
+          <div class="pole">
+            <span style="font-weight:600;">Priorytet</span><br>
+            <label><input type="radio" name="priorytet" value="niski"> Niski</label>
+            &nbsp;
+            <label><input type="radio" name="priorytet" value="normalny" checked> Normalny</label>
+            &nbsp;
+            <label><input type="radio" name="priorytet" value="pilny"> Pilny</label>
+          </div>
+          <div class="pole">
+            <label><input type="checkbox" id="chk-backup"> Zrobić kopię danych</label>
+          </div>
+          <div class="pole">
+            <label for="usluga-z6">Usługa</label><br>
+            <select id="usluga-z6">
+              <option value="diagnostyka">Diagnostyka</option>
+              <option value="naprawa">Naprawa</option>
+              <option value="wymiana">Wymiana dysku</option>
+            </select>
+            <p id="hint-z6" class="hint" style="margin-top:0.4rem;">Wybierz usługę — hint zmieni się przy zmianie opcji.</p>
+          </div>
+          <div class="demo-actions">
+            <button type="button" id="btn-z6">Pokaż zgłoszenie</button>
+          </div>
+        </form>
+        <div class="wynik" id="wynik-z6"></div>
+        <ul class="lista-pozycji">
+          <li class="pozycja">Dysk SSD</li>
+          <li class="pozycja">Pamięć RAM</li>
+          <li>Pasta termoprzewodząca (bez klasy pozycja)</li>
+          <li class="pozycja">Zasilacz</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <a href="../../2026_09_14__powtorka_js_dom/index.html">← Zakres sprawdzianu</a> ·
+      <a href="PODSUMOWANIE.md">PODSUMOWANIE.md</a> ·
+      <a href="ZADANIA.md">ZADANIA.md</a>
+    </footer>
+  </div>
+</body>
+</html>
